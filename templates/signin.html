@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class=" right-panel-active"></div>
+
+<div class="container__form container--signin" style="margin-top: 130px; height: 80%; padding-bottom: 10px;">
+    <form action="#" class="form" id="form2" method="post">
+        <h2 class="form__title">Sign In</h2>
+        <input type="email" name="email" placeholder="Email" class="input" required />
+        <input type="password" name="password" placeholder="Password" class="input"  required/>
+        <a href="{{url_for('reset_request')}}" class="link"> Forget Password</a>
+        <!-- <a href="{{url_for('glogin')}}" class="link"> Signin Through Gmail</a> -->
+        
+        <a href="{{url_for('glogin')}}" class="link"><i class="fa fa-google " aria-hidden="true"></i>
+            Sign in</a>
+
+        <p>Dont have account?<a href="{{url_for('signup')}}" class="link"> Sign Up</a></p>
+        <button class="btn">Sign In</button>
+    </form>
+</div>
+</div>
+
+{% endblock %}

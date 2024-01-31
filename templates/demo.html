@@ -1,0 +1,29 @@
+<!-- <body class="ssss">
+  <main id="swup" class="transition-fade">
+    <h1>This is the home page</h1>
+    <button class="transition-swipe">Button</button>
+  </main>
+</body> -->
+
+
+
+{% extends 'index.html' %}
+
+{% block body %}
+{{ pagination.info }}
+{% for post in posts %}
+        <article class="media content-section cl1">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post["name"] }}</a>
+              <small class="text-muted">{{ post["date_posted"].strftime('%Y-%m-%d') }}</small>
+            </div>
+            {% set id = post["_id"] %}
+            <h2><a class="article-title" href="{{ url_for('post',id=id) }}">{{ post["title"] }}</a></h2>
+            <p class="article-content">{{ post["description"] }}</p>
+          </div>
+        </article>
+    {% endfor %}
+    
+    {{ pagination.links }}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class=" right-panel-active"></div>
+
+<div class="container__form container--signin" style="margin-top: 130px; height: 80%; padding-bottom: 10px;">
+    <form action="" class="form" id="form3" method="post">
+        <h2 class="form__title">Post Generator</h2>
+        <input type="text" name="words" placeholder="Write Your Initial Words/Topic Name" class="input" value=""/>
+        <button class="btn">Generate</button>
+        {% for blog in blogs %}
+        <textarea rows="8" cols="50" name="description" placeholder="Description" 
+            value="" class="input">{{blog['generated_text']}}</textarea>
+        {% endfor %}
+    </form>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class=" right-panel-active"></div>
+<div class="container__form container--signin" style="margin-top: 130px;">
+    <form action="/reset_password" class="form" id="form3" method="post">
+        <h2 class="form__title">Reset</h2>
+        <input type="text" name="mail" placeholder="enter mail" class="input" value=""/>
+        <button class="btn">Post</button>
+    </form>
+</div>
+</div>
+
+{% endblock %}

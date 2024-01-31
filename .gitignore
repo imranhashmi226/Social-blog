@@ -1,0 +1,5 @@
+pyvenv.cfg
+client_secret.json
+/Include
+/Scripts
+/Lib

@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block body %}
+{% for post in posts %}
+<div class=" right-panel-active"></div>
+
+<div class="container__form container--signin" style="margin-top: 130px;">
+    <form action="" class="form" id="form4" method="post">
+        <h2 class="form__title">Update Post</h2>
+        <input type="text" name="title" value="{{ post["title"] }}" class="input" />
+        <textarea id="description" rows="4" cols="50" name="description" value="" 
+             class="input">{{ post["description"] }}</textarea>
+        <button class="btn">Post</button>
+    </form>
+</div>
+</div>
+{% endfor %}
+
+{% endblock %}

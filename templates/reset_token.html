@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class=" right-panel-active"></div>
+<div class="container__form container--signin" style="margin-top: 130px;">
+    <form action="" class="form" id="form3" method="post">
+        <h2 class="form__title">Enter your new Password</h2>
+        <input type="password" name="password" placeholder="Password" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}" required title="8 to 12 characters with one upper, lower & numeric case" />
+			<button class="btn">Submit</button>
+    </form>
+</div>
+</div>
+
+{% endblock %}

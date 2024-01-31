@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class=" right-panel-active"></div>
+
+<div class="container__form container--signin" style="margin-top: 130px;">
+    <form action="/post/new" class="form" id="form3" method="post">
+        <h2 class="form__title">Create Post</h2>
+        <input type="text" name="title" placeholder="Title" class="input" value=""/>
+        <textarea rows="4" cols="50" name="description" placeholder="Description" 
+            value="" class="input"></textarea>
+        <button class="btn">Post</button>
+    </form>
+</div>
+</div>
+
+
+{% endblock %}

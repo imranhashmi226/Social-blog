@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="/signup" class="form" id="form1" method='post'>
+			<h2 class="form__title">Sign Up</h2>
+			<input type="text" name="name" placeholder="User" class="input" required/>
+			<input type="email" name="email" placeholder="Email" class="input" pattern="^[a-zA-Z0-9]+@(gmail|yahoo|corestack|)\.com$" required title="Enter Valid Gmail,Yahoo or CoreStack Id" />
+			<input type="password" name="password" placeholder="Password" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}" required title="8 to 12 characters with one upper, lower & numeric case" />
+			<button class="btn">Sign Up</button>
+		</form>
+	</div>
+
+	<!-- Sign In -->
+	
+
+	<!-- Overlay -->
+	<!-- <div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<button class="btn" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div> -->
+</div>
+
+
+
+{% endblock %}
